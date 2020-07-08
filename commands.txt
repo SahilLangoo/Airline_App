@@ -1,0 +1,23 @@
+jfk = Airport(code='JFK', city="New York")
+jfk.save()
+lhr = Airport(code='LHR', city="London")
+lhr.save()
+cdg = Airport(code='CDG', city="Paris")
+cdg.save()
+nrt = Airport(code='NRT', city="Tokyo")
+nrt.save()
+f = Flight(origin=jfk, destination=lhr, duration=415)
+f.save()
+
+hr.arrivalss.all()
+
+from flights.models import *
+Airport.objects.all()
+
+Airport.objects.filter(city="New York")
+Airport.objects.filter(city="New York").first()
+
+jfk = Airport.objects.get(city="New York")
+cdg = Airport.objects.get(city="Paris")
+f = Flight(origin=jfk, destination=cdg, duration=435)
+f.save()
